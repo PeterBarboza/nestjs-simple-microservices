@@ -9,6 +9,16 @@ import { AppService } from './app.service';
       {
         name: 'COMMUNICATION',
         transport: Transport.TCP,
+        options: {
+          port: 4000,
+        },
+      },
+      {
+        name: 'ANALYTICS',
+        transport: Transport.TCP,
+        options: {
+          port: 4001,
+        },
       },
     ]),
   ],

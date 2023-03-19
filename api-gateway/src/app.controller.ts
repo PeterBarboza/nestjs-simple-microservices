@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Logger, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { CreateUserRequest } from './create-user-request.dto';
 
@@ -17,5 +17,10 @@ export class AppController {
     createUserRequest: CreateUserRequest,
   ) {
     this.appService.createUser(createUserRequest);
+  }
+
+  @Get('/analytics')
+  getAnalytics() {
+    return this.appService.getAnalytics();
   }
 }
