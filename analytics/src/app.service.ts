@@ -5,10 +5,6 @@ import { CreateUserEvent } from './create-user.event';
 export class AppService {
   private readonly analytics: any[] = [];
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   handleUserCreated(data: CreateUserEvent) {
     console.log('handleUserCreated - ANALYTICS', data);
 

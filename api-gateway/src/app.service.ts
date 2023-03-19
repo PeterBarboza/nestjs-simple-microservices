@@ -12,10 +12,6 @@ export class AppService {
     @Inject('ANALYTICS') private readonly analyticsClient: ClientProxy,
   ) {}
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   createUser(createUserRequest: CreateUserRequest) {
     this.users.push(createUserRequest);
     this.communicationClient.emit(
