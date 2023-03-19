@@ -25,7 +25,7 @@ O Api Gateway estará rodando na porta 3000 e as rotas disponíveis são as segu
 
 - POST `/`
 
-  - Cria um novo usuário. Recebe um objeto JSON contendo os campos `email` e `password`;;
+  - Cria um novo registro de usuário em memória. Recebe um objeto JSON contendo os campos `email` e `password`;
   - Ao criar o novo usuário, o evento `user_created` é emitido para os serviços `communication` e `analytics`;
   - O serviço `communication` emite um log no console com os dados recebidos na requisição;
   - O serviço `analytics` salva em memória um objeto contendo o `email` junto de um `timestamp`;
